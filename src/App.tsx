@@ -1,3 +1,4 @@
+import "./styles.css";
 
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
@@ -9,15 +10,14 @@ import {
   GraduationCap, Briefcase, Award, Trophy, Send, ExternalLink,
   Database, Sparkles, Cpu, LineChart,
 } from "lucide-react";
+
 import portrait from "@/assets/nemi-portrait.jpg";
 import resumeAsset from "@/assets/resume.asset.json";
+
 import { Particles } from "@/components/Particles";
 import { Counter } from "@/components/Counter";
 import { Nav } from "@/components/Nav";
 import { TypingTitle } from "@/components/TypingTitle";
-
-
-
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const } },
@@ -647,8 +647,7 @@ function Footer() {
     </footer>
   );
 }
-
-function Portfolio() {
+export default function App() {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       <Particles />
